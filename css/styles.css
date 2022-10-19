@@ -1,0 +1,289 @@
+:root {
+   --orange: #E04D01;
+   --blue: #2A2550;
+   --darkerBlue: #251D3A;
+   --white: #fff;
+}
+
+* {
+   margin: 0;
+   box-sizing: border-box;
+}
+
+html {
+   scroll-behavior: smooth;
+}
+
+body {
+   font-family: 'Roboto', sans-serif;
+   background-color: var(--darkerBlue);
+   color: var(--white);
+}
+
+/*PARTE DEL HEADER*/
+.mate-formate{
+   width: 40px;
+   height: 40px;
+}
+.nav-header{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   background-color:var(--blue) ;
+   padding: 10px 40px;
+}
+
+.btnMenu{
+   display: none;
+   border: none;
+   margin: 0;
+   padding: 0;
+   background-color: transparent;
+   color: var(--orange);
+   font-size: 2.5em;
+}
+
+.enlaces-menu{
+   display: flex;
+   padding: 0px;
+   margin: 0;
+}
+
+a{
+   list-style-type: none;
+}
+
+.btnMenu .nav-bar{
+   display: block;
+   background-color: var(--white);
+   height: 3px;
+   width: 28px;
+   margin: 9px 15px 0px 0px;
+   border-radius: 2px;
+}
+.lista-menu{
+   list-style-type: none;
+   padding: 0px 12px;
+}
+
+.lista-menu .link-menu{
+   text-decoration: none;
+   color: var(--orange);
+   list-style: none;
+   font-size: 1.7rem;
+   font-weight: 500;
+}
+
+.enlaces-menu .lista-menu:hover{
+   text-decoration: underline;
+   color: var(--orange);
+}
+
+/* ------ */
+/* Header*/
+/* ------ */
+#sobre_nosotros{
+   display:flex;
+   height: 40vh;
+   justify-content: space-evenly;
+   align-items: center;
+   min-height: 100vh;
+}
+#sobre_nosotros p{
+   font-size: 1.5rem;
+}
+.imagen_principal {
+   height: 40%;
+}
+
+.title {
+   color: var(--orange);
+   font-size: 2.5rem;
+   text-align: center;
+}
+/* -------------------- */
+/* Slider BECAS cursos */
+/* -------------------- */
+
+#cap_becas {
+   margin: 20px;
+}
+
+#cap_becas h2 {
+   margin-bottom: 12px;
+}
+
+.calendario {
+   height: 200px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+ }
+ /* .tituloCalendario {
+   font-size: 16px;
+   text-transform: uppercase;
+   margin: 1.25rem;
+   text-align: center;
+ }
+  */
+ .slideHorizontal {
+   /* display: block; */
+   width: 100%;
+   overflow-x: scroll;
+   padding: 10px;
+   overflow-x: scroll;
+   overflow-y: hidden;
+ }
+ .slideContainer {
+   /* display: block; */
+   white-space: nowrap;
+ }
+ .item {
+   display: inline-block;
+   margin: 5px;
+ }
+ .item img {
+   width: 225px;
+   height: 150px;
+   object-fit: cover;
+ }
+
+/* ------------- */
+/* Recursos css */
+/* ------------- */
+.parentContainer {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+.containerList {
+   width: 80%;
+   background-color: var(--blue);
+   margin: 18px 0;
+   border-radius: 12px;
+   padding: 12px;
+}
+.subTitle {
+   color: var(--orange);
+   font-size: 2rem;
+   text-align: center;
+}
+
+.titleList{
+   color: var(--orange);
+   font-size: 1.30em;
+}
+
+ul li {
+   padding: 4px;
+}
+
+ul li a {
+   color: var(--white);
+   text-decoration: none;
+}
+
+@media (min-width:500px) {
+  .parentContainer {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   place-items: center;
+   margin: 20px;
+  }
+
+  .containerList {
+   width: 75%;
+  }
+
+  .imagen_principal {
+   /* modificar */
+   height: 50%;
+}
+
+#sobre_nosotros {
+   /* height: 60vh; */
+}
+}
+
+@media (min-width:800px) {
+   .parentContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items: center;
+    margin: 30px;
+   }
+ 
+   .containerList {
+    width: 90%;
+   }
+
+ }
+
+/* Footer css */
+
+footer {
+   padding: 8px;
+   background-color: var(--orange);
+   text-align: center;
+   color: var(--white);
+}
+
+footer p {
+   margin: 0;
+}
+
+@media(max-width:800px){
+   body{
+       overflow-x: hidden;
+   }
+   .mate-formate{
+       margin:-18px 0px -10px 20px;
+   }
+   .btnMenu{
+       display: block;
+       position: absolute;
+       top: 8px;
+       right: 25px;
+   }
+   .nav-header{
+       flex-direction: column;
+       align-items: flex-start;
+       padding: 25px 0;
+   }
+   .enlaces-menu{
+       flex-direction: column;
+       margin: 0;
+       padding: 0;
+       width: 100%;
+       display: none;
+   }
+
+   .lista-menu .link-menu{
+       font-size: 1.25em;
+   }
+
+   .enlaces-menu .lista-menu{
+       width: 100%;
+       text-align: center;
+       padding: 20px;
+   }
+
+.enlaces-menu.activado{
+   display: flex;
+}
+
+@keyframes muestraMenu{
+   from{opacity: 0;}
+   to{opacity: 1;}
+}
+.enlaces-menu.activado{
+   display: flex;
+   animation:muestraMenu 1.5s ease-in-out both;
+}
+
+#sobre_nosotros{
+   flex-direction: column-reverse;
+}
+
+
+}
