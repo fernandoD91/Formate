@@ -4,10 +4,15 @@
    --darkerBlue: #251D3A;
    --white: #fff;
 }
+@font-face {
+   font-family: ETNA;
+   src: url('../assets/fonts/etna-free-font.otf');
+}
 
 * {
    margin: 0;
    box-sizing: border-box;
+   font-family: 'ETNA','Roboto', sans-serif;
 }
 
 html {
@@ -15,7 +20,7 @@ html {
 }
 
 body {
-   font-family: 'Roboto', sans-serif;
+   /* font-family: 'Roboto', sans-serif; */
    background-color: var(--darkerBlue);
    color: var(--white);
 }
